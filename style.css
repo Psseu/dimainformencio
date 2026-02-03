@@ -1,0 +1,137 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ===== BASE ===== */
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #000000, #1f1f1f);
+    color: white;
+}
+
+/* ===== HEADER ===== */
+header {
+    text-align: center;
+    padding: 30px 20px;
+}
+
+/* ===== LOGO ===== */
+.logo {
+    max-width: 100%;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 25px;
+}
+
+/* ===== MENU TOPO (ABAS) ===== */
+.menu-topo {
+    display: flex;
+    justify-content: center;
+}
+
+.menu-topo ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+.menu-topo li {
+    cursor: pointer;
+    font-size: 16px;
+    color: #ffffff;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+/* Linha animada embaixo */
+.menu-topo li::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: #e40fcf;
+    transition: 0.3s;
+}
+
+.menu-topo li:hover::after,
+.menu-topo li.ativo::after {
+    width: 100%;
+}
+
+/* ===== CONTEÚDO PRINCIPAL ===== */
+main {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+/* ===== ABAS ===== */
+.aba {
+    display: none;
+}
+
+.aba.ativo {
+    display: block;
+}
+
+.aba h1 {
+    margin-bottom: 15px;
+}
+
+.aba p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* ===== PARCEIROS ===== */
+.parceiros {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.parceiro {
+    text-decoration: none;
+    color: white;
+    transition: transform 0.3s;
+}
+
+.parceiro img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #e40fcf;
+    transition: 0.3s;
+}
+
+.parceiro span {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.parceiro:hover {
+    transform: scale(1.1);
+}
+
+.parceiro:hover img {
+    box-shadow: 0 0 15px #e40fcf;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    padding: 30px 0;
+    font-size: 14px;
+    color: #cccccc;
+}
