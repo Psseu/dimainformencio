@@ -6,7 +6,12 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Ícones (Font Awesome) -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
@@ -16,9 +21,10 @@
     <!-- MENU DO TOPO -->
     <nav class="menu-topo">
         <ul>
-            <li class="ativo" onclick="abrirAba('aba-inicio', this)">Início</li>
+            <li class="ativo" onclick="abrirAba('aba-inicio', this)">Download</li>
             <li onclick="abrirAba('aba-sobre', this)">Sobre</li>
             <li onclick="abrirAba('aba-parceiros', this)">Parceiros</li>
+            <li onclick="abrirAba('aba-doacao', this)">Doação</li>
             <li onclick="abrirAba('aba-contato', this)">Contato</li>
         </ul>
     </nav>
@@ -26,16 +32,39 @@
 
 <main class="conteudo">
 
-    <!-- ABA INÍCIO -->
+    <!-- ABA DOWNLOAD -->
     <section id="aba-inicio" class="aba ativo">
-        <h1>Bem-vindo ao Projeto Dima</h1>
-        <p>Esse é o site oficial do Projeto Dima.</p>
+        <h1>Grand Theft Auto 1155doET</h1>
+        <p>Download via Gofile</p>
+
+        <a href="https://gofile.io/d/6QWUdo"
+           target="_blank"
+           class="btn-download">
+            Download
+        </a>
     </section>
 
     <!-- ABA SOBRE -->
     <section id="aba-sobre" class="aba">
         <h1>Sobre o Projeto</h1>
-        <p>O Projeto Dima é focado em tecnologia, informática e conteúdo digital.</p>
+
+        <h3>🔹 Requisitos mínimos</h3>
+        <ul class="lista-sobre">
+            <li><strong>Sistema Operacional:</strong> Windows 9/12 (128-bit, versão 32h2)</li>
+            <li><strong>Processador:</strong> Intel Pentium 4 / AMD Athlon X2 555</li>
+            <li><strong>Memória:</strong> 128MB SDRAM</li>
+            <li><strong>Placa de Vídeo:</strong> NVIDIA 6800XT / AMD RX 550</li>
+            <li><strong>Armazenamento:</strong> 3 HDs RAID 0 com 20% de saúde</li>
+        </ul>
+
+        <h3>🔹 Requisitos recomendados</h3>
+        <ul class="lista-sobre">
+            <li><strong>Sistema Operacional:</strong> Windows 17 – Reunion 7 / FemBoyOS</li>
+            <li><strong>Processador:</strong> AMD FX 9590 / Intel Xeon X5460</li>
+            <li><strong>Memória:</strong> 1GB DDR2</li>
+            <li><strong>Placa de Vídeo:</strong> NVIDIA Quadro K5000 / AMD RX 6600</li>
+            <li><strong>Armazenamento:</strong> Pendrive Sandisk 2000GB (8GB real)</li>
+        </ul>
     </section>
 
     <!-- ABA PARCEIROS -->
@@ -55,16 +84,37 @@
         </div>
     </section>
 
+    <!-- ABA DOAÇÃO -->
+    <section id="aba-doacao" class="aba">
+        <li<strong><h1>Ajude</h1> </strong>
+        <h1>!! NECESSITADO !!</h1>
+
+        
+
+        <a href="https://livetip.gg/dimainformatica"
+           target="_blank"
+           class="btn-download">
+             Doar 
+        </a>
+    </section>
+
     <!-- ABA CONTATO -->
     <section id="aba-contato" class="aba">
         <h1>Contato</h1>
-        <p>Email: contato@projetodima.com</p>
+
+        <a href="mailto:contato.dimainformatica@gmail.com"
+           class="email-card"
+           aria-label="Enviar e-mail para o Projeto Dima">
+
+            <i class="fa-solid fa-envelope email-icon"></i>
+            <span>contato.dimainformatica@gmail.com</span>
+        </a>
     </section>
 
 </main>
 
 <footer class="footer">
-    <p>© 2026 - Projeto Dima</p>
+    <p>© 2026 - Dimainformatica</p>
 </footer>
 
 <script>

@@ -9,8 +9,8 @@
 /* ===== BASE ===== */
 body {
     min-height: 100vh;
-    background: linear-gradient(135deg, #000000, #1f1f1f);
-    color: white;
+    background: linear-gradient(135deg, #000, #1f1f1f);
+    color: #fff;
 }
 
 /* ===== HEADER ===== */
@@ -19,35 +19,30 @@ header {
     padding: 30px 20px;
 }
 
-/* ===== LOGO ===== */
 .logo {
-    max-width: 100%;
     height: 150px;
-    object-fit: contain;
     margin-bottom: 25px;
+    object-fit: contain;
 }
 
-/* ===== MENU TOPO (ABAS) ===== */
+/* ===== MENU TOPO ===== */
 .menu-topo {
     display: flex;
     justify-content: center;
 }
 
 .menu-topo ul {
-    list-style: none;
     display: flex;
     gap: 40px;
+    list-style: none;
 }
 
 .menu-topo li {
     cursor: pointer;
-    font-size: 16px;
-    color: #ffffff;
     position: relative;
     padding-bottom: 5px;
 }
 
-/* Linha animada embaixo */
 .menu-topo li::after {
     content: "";
     position: absolute;
@@ -64,7 +59,7 @@ header {
     width: 100%;
 }
 
-/* ===== CONTEÚDO PRINCIPAL ===== */
+/* ===== CONTEÚDO ===== */
 main {
     max-width: 900px;
     margin: 50px auto;
@@ -72,52 +67,81 @@ main {
     text-align: center;
 }
 
-/* ===== ABAS ===== */
-.aba {
-    display: none;
-}
+.aba { display: none; }
+.aba.ativo { display: block; }
 
-.aba.ativo {
-    display: block;
-}
-
-.aba h1 {
-    margin-bottom: 15px;
-}
-
+.aba h1 { margin-bottom: 15px; }
 .aba p {
     font-size: 16px;
     line-height: 1.6;
 }
 
+/* ===== BOTÃO DOWNLOAD ===== */
+.btn-download {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 14px 36px;
+    background: #e40fcf;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 30px;
+    box-shadow: 0 6px 0 #a30a94;
+    transition: 0.2s;
+}
+
+.btn-download:hover {
+    transform: translateY(2px);
+    box-shadow: 0 4px 0 #a30a94;
+}
+
+/* ===== ABA SOBRE ===== */
+#aba-sobre h3 {
+    margin: 40px 0 18px;
+    color: #e40fcf;
+}
+
+.lista-sobre {
+    max-width: 700px;
+    margin: 0 auto 35px;
+    list-style: none;
+    text-align: left;
+}
+
+.lista-sobre li {
+    margin-bottom: 12px;
+    padding-left: 22px;
+    position: relative;
+}
+
+.lista-sobre li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #e40fcf;
+}
+
 /* ===== PARCEIROS ===== */
 .parceiros {
     display: flex;
-    justify-content: center;
     gap: 60px;
     margin-top: 40px;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
 .parceiro {
     text-decoration: none;
-    color: white;
-    transition: transform 0.3s;
+    color: #fff;
+    transition: 0.3s;
 }
 
 .parceiro img {
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    object-fit: cover;
     border: 3px solid #e40fcf;
     transition: 0.3s;
-}
-
-.parceiro span {
-    display: block;
-    margin-top: 10px;
-    font-weight: bold;
 }
 
 .parceiro:hover {
@@ -128,10 +152,45 @@ main {
     box-shadow: 0 0 15px #e40fcf;
 }
 
+/* ===== CONTATO ===== */
+.email-card {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    margin-top: 40px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.email-icon {
+    font-size: 48px;
+    padding: 18px;
+    border-radius: 50%;
+    background: #1f1f1f;
+    color: #EA4335;
+    box-shadow: 0 6px 0 #a30a94;
+    transition: 0.2s;
+}
+
+.email-card:hover .email-icon {
+    transform: translateY(2px);
+    box-shadow: 0 4px 0 #a30a94;
+}
+
 /* ===== FOOTER ===== */
 footer {
     text-align: center;
     padding: 30px 0;
     font-size: 14px;
-    color: #cccccc;
+    color: #ccc;
+}
+/* ===== BOTÃO DOAÇÃO VERDE (SEM MEXER NO HTML) ===== */
+#aba-doacao .btn-download {
+    background: #00c853;          /* verde */
+    box-shadow: 0 6px 0 #009624;
+}
+
+#aba-doacao .btn-download:hover {
+    box-shadow: 0 4px 0 #009624;
 }
